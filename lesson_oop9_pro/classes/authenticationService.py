@@ -51,6 +51,12 @@ class AuthenticationService:
             return f"Пользователь {username} успешно вышел из системы."
         return "Ошибка: Нельзя выйти из системы, так как пользователь отсутствует."
     
+    def get_current_user(self):
+        """
+        Возвращает текущего аутентифицированного пользователя.
+        """
+        return self.current_user
+    
 
     
 

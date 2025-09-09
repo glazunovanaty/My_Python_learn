@@ -11,24 +11,24 @@ print(auth_service.register('admin', "root", "admin@admin.ru", "rootpass", 1))
 print()
 
 # Пытаемся зарегистрировать пользователя с уже существующим именем
-#print(auth_service.register('customer', "Nataly", "аааа@aaa.ru", "123321", "Rostov, Russia"))
+print(auth_service.register('customer', "Nataly", "аааа@aaa.ru", "123321", "Rostov, Russia"))
 
 # Пытаемся войти с неправильным паролем
-#print(auth_service.login("Nataly", "wrongpassword"))
+print(auth_service.login("Nataly", "wrongpassword"))
 # Входим с правильным паролем
-#print(auth_service.login("Nataly", "123321"))
+print(auth_service.login("Nataly", "123321"))
 # Получаем текущего пользователя
-#current_user = auth_service.get_current_user()
-#if current_user!=None:
-#    print("Текущий пользователь:", current_user.get_details())
-#else:   
-#    print(current_user)
+current_user = auth_service.get_current_user()
+if current_user!=None:
+    print("Текущий пользователь:", current_user.get_details())
+else:   
+    print(current_user)
 # Выходим из системы
-#print(auth_service.logout())        
+print(auth_service.logout())        
 # Пытаемся получить текущего пользователя после выхода
-#print(auth_service.get_current_user()) 
+print(auth_service.get_current_user()) 
 # Пытаемся выйти из системы, когда пользователь уже вышел
-#print(auth_service.logout())                        
+print(auth_service.logout())                        
 
 # Входим как администратор
 print(auth_service.login("root", "rootpass"))
