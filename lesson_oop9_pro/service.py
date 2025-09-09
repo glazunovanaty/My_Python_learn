@@ -10,6 +10,7 @@ print(auth_service.register('customer', "Nataly","glazunova.naty@gmail.com", "12
 print(auth_service.register('admin', "root", "admin@admin.ru", "rootpass", 1))
 print()
 
+
 # Пытаемся зарегистрировать пользователя с уже существующим именем
 print(auth_service.register('customer', "Nataly", "аааа@aaa.ru", "123321", "Rostov, Russia"))
 
